@@ -15,7 +15,7 @@ class User:
 
     @classmethod
     def find_credentials(cls,name):
-        for credentials in Credentials.credentials_list:
+        for credentials in cls.credentials_list:
             if credentials.credentials_name==name:
                 return True
             else:

@@ -27,6 +27,32 @@ class TestUser(unittest.TestCase):
     def test_display_user(self):
         self.assertEqual(User.display_user(),User.user_list)
 
+    def test_find_credentials(self):
+        self.new_user.save_user()
+        test_user=User("Cory","Ills97")
+        test_user.save_user()
+        found_credentials=User.find_credentials("Ills97")
+        self.assertEqual(found_credentials, True)
+
+    def test_user_exists(self):
+        self.new_user.save_user()
+        test_user=User("Cory","Ills97")
+        test_user.save_user()
+        user_exists=User.user_exists("Cory")
+        self.assertTrue(user_exists)
+
+        
+
+    def test_log_in(self):
+        self.new_user.save_user()
+        test_user=User("Cory","Ills97")
+        test_user.save_user()
+        found_credentials=User.log_in("Cory","Ills97")
+        self.assertEqual(found_credentials,Credentials.credentials_list)
+        
+   
+        
+
 if __name__=='__main__':
     unittest.main()
 
