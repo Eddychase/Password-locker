@@ -17,7 +17,8 @@ class Credentials:
         Credentials.credentials_list.remove(self)
 
     @classmethod
-    def generate_password(cls,size):
+    def generate_password(cls):
+        size=8
         scope=string.ascii_letters + string.digits
         '''
         Takes random choices from ascii_letters and digits

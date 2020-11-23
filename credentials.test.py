@@ -24,6 +24,10 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
 
+    def test_generate_password(self):
+        new_password=self.new_credentials.generate_password()
+        self.assertEqual(len(new_password),8)
+
 
 if __name__=='__main__':
     unittest.main()
