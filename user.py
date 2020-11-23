@@ -13,3 +13,12 @@ class User:
     def display_user(cls):
         return cls.user_list
 
+    @classmethod
+    def find_credentials(cls,name):
+        for credentials in Credentials.credentials_list:
+            if credentials.credentials_name==name:
+                return True
+            else:
+                return False
+
+
