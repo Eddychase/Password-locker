@@ -1,3 +1,5 @@
+import random
+
 class Credentials:
     credentials_list=[]
 
