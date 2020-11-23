@@ -5,3 +5,7 @@ class User:
     def __init__(self,user_name,user_password):
         self.user_name=user_name
         self.user_password=user_password
+
+    def save_password(self):
+        User.user_list.append(self)
+        
