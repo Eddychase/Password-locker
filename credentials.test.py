@@ -10,5 +10,8 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.last_name,"Chase")
         self.assertEqual(self.new_credentials.password,"Goog97")
 
+    def tearDown(self):
+        Credentials.credentials_list=[]
+
 
     
