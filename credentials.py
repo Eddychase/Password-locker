@@ -27,4 +27,11 @@ class Credentials:
 
         return generate_password
 
+    @classmethod
+    def display_credentials(cls):
+        '''
+        a class method involves the whole class the display credentials
+        '''
+        return cls.credentials_list
+
    
