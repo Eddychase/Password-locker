@@ -28,6 +28,8 @@ class TestCredentials(unittest.TestCase):
         new_password=self.new_credentials.generate_password()
         self.assertEqual(len(new_password),8)
 
+    def test_display_credentials(self):
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
 
 if __name__=='__main__':
     unittest.main()
