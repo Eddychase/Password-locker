@@ -8,4 +8,8 @@ class User:
 
     def save_password(self):
         User.user_list.append(self)
-        
+
+    @classmethod
+    def display_user(self):
+        return cls.user_list
+
