@@ -29,6 +29,14 @@ class User:
             else:
                 return False
 
+    @classmethod
+    def user_exists(cls,name):
+        for user in cls.user_list:
+            if user.user_name==name:
+                return True
+            else:
+                return False
+
     
 
 
